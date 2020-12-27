@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+	@model List<SharpDevelopMVC4.Models.Customer>
+		<title>ViewCus</title>
+	</head>
+	<body>
+		<div>
+		
+		</div>
+		<div class="card-header">
+		<h2 style="text">List of customers</h2>
+		</div>
+		
+		<table class="table table-bordered"  style="margin-top:30px;">
+    <thead>
+      <tr>
+         <th>Id</th>
+        
+        <th>FirstName</th>
+        <th>Lastname</th>
+         <th>Address</th>
+          <th>Username</th>
+           <th>Password</th>
+            <th>Date</th>
+      
+    
+         
+      </tr>
+    </thead>
+    
+   <tbody>
+
+	@foreach(var p in Model)
+	{
+	    <tr>
+	     <td>@p.Id</td>
+       
+        <td>@p.FirstName</td>
+         <td>@p.Lastname</td>
+         <td>@p.Address</td>
+         <td>@p.Username</td>
+         <td>@p.Password</td>
+         <td></td>
+        
+    </tr>
+     
+	}
+    
+    
+     </tbody>
+  </table>
+		
+			
+		
+		
+	</body>
+</html>

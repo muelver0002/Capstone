@@ -1,0 +1,54 @@
+﻿@model SharpDevelopMVC4.Models.UploadImage
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Index</title>
+	</head>
+	<body>
+		<div>
+		
+		
+		<table class="table table-bordered"  style="margin-top:30px;">
+    <thead>
+      <tr>
+         <th>Id</th>
+        
+        <th>Name</th>
+        <th>Image</th>
+        
+      
+    
+       
+         <th></th>
+          <th></th>
+         
+      </tr>
+    </thead>
+    
+   <tbody>
+
+	@foreach(var p in Model)
+	{
+	    <tr>
+	     <td>@p.Id</td>
+       
+        <td>@p.name</td>
+       
+         
+        <td> <img scr="@Url.Content(p.img)" alt =" not found " width ="80" height ="80")></td>     
+    
+    </tr>
+     
+	}
+    
+    
+     </tbody>
+  </table>
+		
+		
+		
+		
+		</div>
+	</body>
+</html>

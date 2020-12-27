@@ -1,0 +1,55 @@
+﻿@model SharpDevelopMVC4.Models.UploadImage
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Create</title>
+	</head>
+	<body>
+	
+	<h1>@ViewBag.message</h1>
+		<div>
+		
+		
+		
+		
+		
+		
+		
+		<form action="/image/create" method="post" enctype="multipart/form-data">
+         @Html.AntiForgeryToken()
+	<div class="form-group">
+	    <label  >Name</label>
+	    <input type="text" name="name" class="form-control input-md" required>
+  	</div>
+   
+   
+             
+            </div>
+            	
+	<input type="file"    id="img" name="img">
+  	<div><button type="submit" class="btn btn-primary" >Add</button></div>
+  	<br>
+  
+</form>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		</div>
+	</body>
+</html>

@@ -1,0 +1,91 @@
+﻿@model List<SharpDevelopMVC4.Models.Product>
+
+@{
+	ViewBag.Title = "Index";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	
+	var Products = ViewBag.Products;
+}
+<h1>@ViewBag.message</h1>
+<h1>@ViewBag.info</h1>
+<h1>Welcome, @Session["Uname"]</h1>
+<br><br>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1>ONLINE VETERINARY CLINIC</h1>
+  <p>INSPIRED BY MASTER Gabon Senpai!</p> 
+</div>
+
+
+
+
+<br>
+<br>
+
+
+
+<form action="/product/search">
+
+   
+   <div class="container">
+   
+   <div class="row">
+   
+   <div class="col-md-xl">
+   <input type="text" class="form-control" name="key" placeholder="Search"/>
+   </div>
+   
+   <div class="col-md-xl"> 
+   <button type="submit" class="btn btn-primary" style="margin-left:1px">Search</button>
+   </div>
+   
+   <div class="col-md-xl">
+    <select  name="priceSort" class="form-control" style="margin-left:5px"> 
+		<option>Sort By</option>
+		<option value="low" >A to Z</option>
+		<option value="high">Z to A</option>	
+	</select>
+   </div>
+   
+   <div class="col-md-xl">
+    <button type="submit" class="btn btn-primary"  style="margin-left:5px ">SortNow</button>
+   </div>
+  
+   </div>
+   </div>
+	
+</form>
+
+<hr />
+
+<div class="container" style="margin-top:30px">
+  <div class="row">
+   
+    
+    
+
+ @foreach (var Vet in Model)
+{
+  
+
+    
+    <div class="col-sm-4">
+      <h1  class="font-weight-light">@Vet.Name</h1>
+      <p>@Vet.Location</p>
+      <div class="fakeimg"><img src="~/Content/img/clinic.jpg" alt="Sample Image" width="300px" /></div><br>
+      <div> <a href="/product/view?Id=@Vet.Id" class="btn btn-primary btn-sm" style="margin-left:5px">View</a></div>
+      <p>Some text..</p>
+      <p>Mga Other info here.</p>
+      <br>
+      <hr />
+    </div>
+
+    }
+  </div>
+  
+</div>
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <p>SOCIAL MEDIA ACCOUNT AND OTHER INFORMATION HERE!</p>
+  
+</div>

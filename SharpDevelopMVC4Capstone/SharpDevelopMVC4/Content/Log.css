@@ -1,0 +1,148 @@
+﻿/*
+ * Created by SharpDevelop.
+ * User: acer
+ * Date: 20/12/2020
+ * Time: 7:34 PM
+ * 
+ * To change this template use Tools | Options | Coding | Edit Standard Headers.
+ */
+
+body{
+width: 100%;
+height: 100%;
+margin: 0;
+padding: 0;
+background-image: url('img/back.jpg');
+background-repeat: no-repeat;
+
+font-family: sans-serif;
+
+}
+
+.loginbox{
+
+width: 300px;
+height: 200px;
+background:white;
+color: white;
+top: 50%;
+left: 50%;
+position: absolute;
+transform: translate(-50% ,-50%);
+box-sizing: border-box;
+padding: 250px 30px;
+border-radius: 10px;
+/* padding-top: 20px;
+padding-bottom: 20px ; */
+}
+.registerbox{
+
+    width: 300px;
+    height: 500px;
+    background:white;
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50% ,-50%);
+    box-sizing: border-box;
+    padding: 250px 30px;
+    border-radius: 10px;
+    padding-top: 200px;
+    /* padding-top: 20px;
+    padding-bottom: 20px ; */
+    }
+
+.loginbox input{
+ width:  100%;
+ margin-bottom: 20px;
+
+
+}
+.loginbox input[type="text"], input[type="password"],input[type="number"]{
+border: none;
+border-bottom: 1px solid black ;
+background: transparent;
+outline: none;
+height: 20px;
+color: black;
+font-size: 16px;
+
+
+}
+.logo{
+
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 30px;
+    left: calc(55% - 70px);
+}
+
+.login-btn{
+border: none;
+outline: none;
+height: 50px;
+color: #fff;
+font-size: 16px;
+border-radius: 20px ;
+background: gray;
+
+
+}
+
+
+.create-btn{
+    border: none;
+    outline: none;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px ;
+    background: gray;
+   /* background: linear-gradient(to top right,blue,red);*/
+    
+    
+    }
+    a{
+      
+      font-size: 12px;
+      color: black;
+      text-decoration: none;
+
+    }
+
+
+.save-btn{
+   
+    border: none;
+    outline: none;
+    height: 50px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px ;
+    background: gray;
+   /* background: linear-gradient(to top right,blue,red);*/
+    
+    
+    }
+
+
+.registerbox input{
+ width:  100%;
+ margin-bottom: 10px;
+
+
+}
+
+.registerbox input[type="text"], input[type="password"],input[type="number"]{
+border: none;
+border-bottom: 1px solid black ;
+background: transparent;
+outline: none;
+height: 20px;
+color: black;
+font-size: 16px;
+
+
+}

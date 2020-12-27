@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Content/Log.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+               
+        <div class="registerbox">       
+      
+                <img src="img/logo.png" class="logo">
+                   <form  action="/customer/register" method="post">
+                  <input type="text" name="FirstName" placeholder="First Name" required>
+                  <input type="text" name="Lastname" placeholder="Last Name" required>
+                  <input type="text" name="Address" placeholder="Address" required>
+                  <input type="text" name="Username" placeholder="UserName" required>
+                  <input type="password" name="Password" placeholder="Password" required>
+                      <p style="color: red; font-size:12px ">
+			          @ViewBag.message
+			          </p>
+                  <input type="submit"  class="save-btn" value="SAVE"> 
+                
+                   </form>
+               
+                </div>
+
+</body>
+</html>

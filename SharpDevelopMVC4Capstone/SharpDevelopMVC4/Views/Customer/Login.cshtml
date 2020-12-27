@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+     <link rel="stylesheet" href="/Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Content/Log.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<div class="loginbox">
+<img src="img/logo.png" class="logo">
+  
+   <form action="/customer/login" method ="post">
+
+  <input type="text" name="Username"placeholder="User Name" required>
+  <input type="password" name="Password" placeholder="Password" required>
+  <input type="submit" class="login-btn" value="LOG IN">
+    <p style="color: red; font-size:12px ">
+			          @ViewBag.message
+			          </p>
+  <a href="/customer/register"    >+ Create New</a>
+   </form>
+  
+  
+  
+ 
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿@{
+	ViewBag.Title = "Calcu";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Simple Currency Converter</h2><br>
+
+ 
+<form action ="/Home/Calcu " method="post"> 
+
+
+<input type="number" name="amount"  class="form-control" placeholder="Enter Amount" required>
+<label>From</label>
+<select class="form-control" name="country">
+<option value="Php">Php</option>
+<option value="Usd">Usd</option>
+</select><br>
+
+
+
+<label>To</label>
+
+<select class="form-control" name="country1">
+	@foreach(string cur in ViewBag.Currencies  as String[])
+	{ 
+		<option value="@cur">@cur</option>
+	}
+</select>
+
+</select><br>
+ <button type="submit" class="btn btn-primary btn-lg">Convert</button>
+
+    <br><br>
+   <p>@ViewBag.Amount</p>
+  
+  <input type="file" class="form-control" style="background:none;"><br><br>
+  <textarea cols="30" rows="5"  class="form-control" > 
+  </textarea>
+  
+  
+</form>
+
+
+
+
+
+
+
