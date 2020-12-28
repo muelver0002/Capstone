@@ -1,0 +1,82 @@
+﻿@{
+	ViewBag.Title = "Edit";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	
+	var Product = ViewBag.Product;
+	var Categories = ViewBag.Category;
+}
+
+<h2>Edit</h2>
+
+<form action ="/product/edit?Id=@ViewBag.ID" method="post" enctype="multipart/form-data" class="form-horizontal"> 
+ @Html.AntiForgeryToken()
+   
+   
+    <fieldset>
+            
+            @if (ViewData.ModelState[""] != null && ViewData.ModelState[""].Errors.Count > 0)
+            {                   
+				<div class="alert alert-warning alert-dismissible fade show" role="alert">
+				  @Html.ValidationSummary(true)
+				  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				    <span aria-hidden="true">&times;</span>
+				  </button>
+				</div>                    
+			}
+			
+			
+			
+		<div class = "form-group">
+		<label class="col-md-4 control-label">Name</label>
+		 <div class="col-md-4">
+		<input type="text" name="Name" class="form-control" value="@Product.Name" required>
+		 </div>
+		</div>
+
+
+		<div class="form-group">
+	    <label class="col-md-4 control-label">Location</label>
+	     <div class="col-md-4">
+	     <textarea name="Location" class="form-control textarea-md" value="@Product.Location" required>@Product.Location</textarea>
+	      </div>
+  		</div>
+  	
+  		<div class="form-group">
+	    <label class="col-md-4 control-label">Scedule</label>
+	      <div class="col-md-4">
+	    <input type="text" name="Schedule" class="form-control input-md" value="@Product.Schedule" required>
+	      </div>
+  		</div>
+  		
+  		<div class="form-group">
+	    <label class="col-md-4 control-label" >Contact Info</label>
+	      <div class="col-md-4">
+	    <input type="text" name="ContactInfo"  class="form-control input-md" value="@Product.ContactInfo"required>
+	      </div>
+  	    </div>
+  	
+  		<div class="form-group">
+	    <label class="col-md-4 control-label" >Services</label>
+	     <div class="col-md-4">
+	    <textarea name="Services" class="form-control textarea-md" value="@Product.Services" required>@Product.Services</textarea>
+	     </div>
+  		</div>
+		
+		<!-- File Upload -->
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="fileUpload">Photo</label>
+                <div class="col-md-4">
+                    <input type="file" accept="image/*" id="fileUpload" name="fileUpload" class="form-control input-md"  required>
+                </div>
+            </div>
+            
+            
+               <div class="form-group">
+                <label class="col-md-4 control-label" ></label>
+                <div class="col-md-4">
+                   <button type="submit" class="btn btn-primary">Update</button>
+                </div>
+            </div>
+
+ </fieldset>
+</form>
